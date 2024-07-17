@@ -8,14 +8,19 @@
   </head>
   <body>
     <header>
+      <div class="intro-animation">
+        <canvas id="introCanvas"></canvas>
+      </div>
       <h1>Tayler Ramsay</h1>
       <p>UX Designer & Front-End Developer</p>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
     </header>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#design-system">Design System</a></li>
       </ul>
     </nav>
     <section id="about">
@@ -30,22 +35,58 @@
     </section>
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div class="project">
+      <div class="project" data-scroll>
         <h3>AI Multi-Agent Bot</h3>
-        <img src="images/project1.png" alt="AI Multi-Agent Bot" />
-        <p>
-          Description of the project, your role, the process, and the outcomes.
-        </p>
+        <div class="prototype-container">
+          <img src="images/project1.png" alt="AI Multi-Agent Bot" />
+          <div class="prototype-overlay">
+            <p>
+              Key Highlights: AI-driven interactions, multi-agent system,
+              user-centric design.
+            </p>
+            <a href="figma/prototypes/project1.html" target="_blank"
+              >View Prototype</a
+            >
+          </div>
+        </div>
       </div>
-      <div class="project">
+      <div class="project" data-scroll>
         <h3>Cross-Functional Team Processes</h3>
-        <img src="images/project2.png" alt="Cross-Functional Team Processes" />
-        <p>Details on how you improved team collaboration and efficiency.</p>
+        <div class="prototype-container">
+          <img
+            src="images/project2.png"
+            alt="Cross-Functional Team Processes"
+          />
+          <div class="prototype-overlay">
+            <p>
+              Details on how you improved team collaboration and efficiency.
+            </p>
+            <a href="figma/prototypes/project2.html" target="_blank"
+              >View Prototype</a
+            >
+          </div>
+        </div>
       </div>
-      <div class="project">
+      <div class="project" data-scroll>
         <h3>Ecommerce Platforms</h3>
         <p>Showcase your work at Pavone and Versatile Credit.</p>
       </div>
+    </section>
+    <section id="design-system">
+      <h2>Design System</h2>
+      <p>Explore the components and styles used in my projects.</p>
+      <ul>
+        <li>
+          <a href="design-system/components/buttons.html" target="_blank"
+            >Buttons</a
+          >
+        </li>
+        <li>
+          <a href="design-system/components/cards.html" target="_blank"
+            >Cards</a
+          >
+        </li>
+      </ul>
     </section>
     <section id="contact">
       <h2>Contact</h2>
@@ -59,6 +100,6 @@
     <footer>
       <p>&copy; 2024 Tayler Ramsay. All rights reserved.</p>
     </footer>
+    <script src="scripts/main.js"></script>
   </body>
-  <script src="scripts/main.js"></script>
 </html>
