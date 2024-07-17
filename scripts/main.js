@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor.style.top = `${e.pageY}px`;
         }
     });
+});
 
     document.querySelectorAll('a, button').forEach(elem => {
         elem.addEventListener('mouseenter', () => {
@@ -27,21 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    }
-
-    // Intersection Observer for scroll animations
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('data-scroll-in');
-                observer.unobserve(entry.target); // Stop observing once the animation is applied
-            }
-        });
+            document.body.classList.toggle('dark-mode');});}
+            // Intersection Observer for scroll animations
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('data-scroll-in');
+            observer.unobserve(entry.target); // Stop observing once the animation is applied
+        }
     });
+});
 
-    document.querySelectorAll('.project[data-scroll]').forEach(project => {
-        observer.observe(project);
-    });
+document.querySelectorAll('.project[data-scroll]').forEach(project => {
+    observer.observe(project);
 });
