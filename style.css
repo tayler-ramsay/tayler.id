@@ -39,8 +39,23 @@ section {
   padding: 2rem;
 }
 
+#about img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
 .project {
   margin-bottom: 2rem;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
