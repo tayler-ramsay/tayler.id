@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('data-scroll-in');
+                observer.unobserve(entry.target); // Stop observing once the animation is applied
             }
         });
     });
